@@ -1,0 +1,58 @@
+body {
+  background: orange;
+}
+
+.finished {
+  text-decoration: line-through;
+}
+
+#sleeping {
+  font-weight: bold;
+}
+
+/*Element*/
+tr {}
+
+/*class*/
+.div {}
+
+/*id*/
+#name {}
+
+/*star*/
+/*Applies to everything on the page*/
+
+* {}
+
+/*Descendant selector*/
+/*select all elements that are descendants of another element*/
+/*name elements left to right, parent to child, space-separated: */
+li a {
+  font-style: italic;
+}
+
+ul li span {
+  background: blue;
+}
+
+/* Adjacent Selector */
+/*Select all elements that come after another element (siblings)*/
+/*same as above but with + between*/
+input + ul {
+  color: green;
+}
+
+/*Attribute Selector*/
+/*select all elements with a specific attribute ('type' of input, or 'href' of anchor tag)*/
+/*name the desired elelment followed by the attribute (key value) in brackets*/
+
+a[href='http://www.reddit.com'] {
+  border: 2px dotted pink;
+}
+
+/*nth of type*/
+/*selects every nth of desired element*/
+
+li:nth-of-type(2) {
+  border: 1px solid grey;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register Now!</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form>
+      <div>
+        <label for='firstName'>First Name:</label>
+        <input id='firstName' name='first' type='text' placeholder='Troy' required>
+        <label for='lastName'>Last Name:</label>
+        <input id='lastName' name='last' type='text' placeholder='McGregor' required>
+      </div>
+      <div>
+        <label for='male'>Male</label>
+        <input id='male' name='gender' type='radio' value='M'>
+        <label for='female'>Female</label>
+        <input id='female' name='gender' type='radio' value='F'>
+        <label for='other'>Other</label>
+        <input id='other' name='gender' type='radio' value='O'>
+      </div>
+      <div>
+        <label for='email'>Email:</label>
+        <input id='email' type='email' placeholder='example@site.com' required>
+        <label for='password'>Password:</label>
+        <input id='password' name='password' type='password' placeholder='password' minlength='5' required title='Password must be at least 5 characters long'>
+      </div>
+      <div>
+        <label for='bdayMonth'>Birthday:</label>
+        <select name='bdayMonth' required>
+          <option value=''>Month</option>
+          <option value='jan'>January</option>
+          <option value='feb'>February</option>
+          <option value='mar'>March</option>
+        </select>
+        <select name='bdayDay' required>
+          <option value=''>Day</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+        </select>
+        <select name='bdayYear' required>
+          <option value=''>Year</option>
+          <option value='2017'>2017</option>
+          <option value='2000'>2000</option>
+          <option value='1990'>1990</option>
+          <option value='1745'>1745</option>
+        </select>
+      </div>
+      <div>
+        <label for='termsConds'>I agree to the Terms and Conditions</label>
+        <input id='termsConds' name='terms' type='checkbox' required>
+      </div>
+      <div>
+        <input type='submit'>
+      </div>
+    </form>
+
+  </body>
+</html>

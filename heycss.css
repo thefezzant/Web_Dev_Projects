@@ -1,0 +1,40 @@
+p {
+  border: 1px dashed rgb(230,230,230);
+}
+
+div.topPara p ~ span{
+  position: relative;
+}
+
+div.topPara p:hover ~ span{
+  display: none;
+}
+
+div.topPara p:hover::after{
+  content: 'New Text.';
+  color: orange;
+  border-bottom: 1px solid #000;
+}
+
+div.bottPara p #test1 {
+  position: relative;
+}
+div.bottPara > p > #test1:hover {
+  display: none;
+}
+div.bottPara p #test1:hover::after {
+  content: 'Bee hi.';
+}
+div.bottPara #test2 {
+  position: relative;
+}
+div.bottPara #test2:hover {
+  display: none;
+}
+div.bottPara #test2:hover::after {
+  content: 'Cee hi.';
+}
+
+.topPara[title~='nav'] {
+  background-color: limegreen;
+}

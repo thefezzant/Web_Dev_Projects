@@ -1,0 +1,39 @@
+----------
+INDEX.HTML
+----------
+---- Issues ----
+-> colums not floating correctly
+
+---- Wishlist ----
+
+---------------
+ENCOUNTERS.HTML
+---------------
+---- Issues ----
+
+FIXED-> Certain form inputs not selectable with cursor at certain sizes
+FIXED-> FA icon font not displaying correctly in select menu
+FIXED-> improve/enable revert of player icons from map
+FIXED-> delete button on player bars not working
+
+
+---- Wishlist ----
+
+DONE-> Fill out form and create a new span with info in Initiative secion
+DONE--> do above without refreshing page
+DONE--> also make sure it's moveable
+DONE--> and has proper (selected) icon in the span
+
+DONE--> make them deletable from Initiative section
+Partially DONE (current HP only)--> make them editable (hp changes mostly)
+
+----> STRETCH: Make background color or player bar reflect HP (drains with HP, changes color, etc)
+----> STRETCH: Make a list of regular players to drag n drop from
+-->
+
+DONE-> choose color of drawing
+-> make drawing act like a pencil (click + drag = one color change event per square)
+
+
+-> STRETCH: Make map table created by JS on page load (pre-write <tr>s and fill them with x amounts of <td>s)
+--> SUPER STRETCH: choose dimensions of grid before building

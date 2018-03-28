@@ -1,0 +1,17 @@
+.portfolio-img {
+	width: 100%;
+
+}
+#portfolio {
+	padding-top: 20px;
+}
+
+.pageTitle {
+	width: 100%;
+	background: white;
+	text-align: center;
+}
+body {
+	padding-top: 70px;
+	background: black;
+}

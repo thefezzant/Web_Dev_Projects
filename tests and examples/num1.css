@@ -1,0 +1,23 @@
+body {
+  background: pink;
+  /*background-repeat: no-repeat;
+  background-size: cover; */
+}
+h1 {
+  color: #F400DD;
+  /*border-style: solid;
+  border-color: purple;
+  border-width: 5px;*/
+
+  border: 4px double teal;
+}
+
+li {
+  color: rgba(255, 100, 90, 0.5);
+}
+
+h4 {
+  background: rgb(200, 15, 0);
+
+  color: #28b77a;
+}

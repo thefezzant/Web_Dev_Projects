@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Person Displayer</title>
+    <style>
+      table {
+        border: 2px solid black;
+        color: red;
+      }
+      td {
+        border: 2px solid black;
+        text-align: center;
+        height: 200px;
+        width: 200px;
+      }
+      label {
+        font-style: strong;
+      }
+    </style>
+  </head>
+  <body>
+
+    <span class="label" for="personTable">Person Here</span>
+    <table class="table" id="personTable">
+      <tr>
+        <td>First Name: <%= person.first %></td>
+        <td>Last Name: <%= person.last %></td>
+      </tr>
+      <tr>
+        <td>Favorite Color: <%= person.favColor %></td>
+        <td>Car: <%= person.car %></td>
+      </tr>
+    </table>
+
+    <form action="/addperson" method="post">
+      <input type="text" name="first" placeholder="First Name">
+      <input type="text" name="last" placeholder="Last Name">
+      <input type="text" name="favColor" placeholder="Favorite Color">
+      <input type="text" name="car" placeholder="Car Type">
+      <button>Update Person</button>
+</form>
+
+</body>
+</html>
