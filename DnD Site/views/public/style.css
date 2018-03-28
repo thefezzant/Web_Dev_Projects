@@ -1,0 +1,272 @@
+body {
+  padding-top: 70px;
+  background-color: #080808;
+  color: #f1f1f1;
+}
+
+.container-fluid {
+  margin: 10px;
+}
+
+.body-content {
+  background-color: #222;
+  border-radius: 8px;
+  /* margin: 5px; */
+  padding: 10px;
+}
+
+.firstPara {
+  border-left: 3px solid lightgrey;
+  padding-left: 5px;
+}
+
+.body-content h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+.sidebar-left {
+  background-color: #222;
+  border-radius: 8px;
+  /* margin: 5px; */
+  padding: 10px;
+}
+
+.sidebar-right {
+  background-color: #222;
+  border-radius: 8px;
+  /* margin: 5px; */
+  padding: 10px;
+}
+
+
+#sortable, #sortable2 {
+  list-style-type: none;
+  padding: 3px;
+  min-height: 150px;
+  background-color: #111111;
+  border-radius: 5px;
+  border: 1px solid #4e4e4e;
+  font-family: "Roboto";
+  font-size: 16px;
+  color: black;
+  transition: all 0.5s;
+  /* vertical-align: middle; */
+}
+#sortable li, #sortable2 li {
+  margin: 3px;
+  padding: 0.1em 0.4em 0.1em 0.3em;
+  border: 1px solid white;
+
+}
+#sortable li > i, #sortable2 li > i{
+  margin: 4px 3px 3px 0;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  font-size: 110%;
+  vertical-align: middle;
+
+
+}
+#sortable li span, #sortable2 li span {
+  position: relative;
+  vertical-align: middle;
+  margin: auto 8px;
+}
+
+li.NPC {
+  border-radius: 5px;
+  background-color: #f96161;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+li.player {
+  border-radius: 20px;
+  background-color: #90be91;
+  vertical-align: middle;
+}
+
+@keyframes blinker {
+  40% { border: 1px solid black;
+    background-color: #fee96c;}
+}
+
+#sortable li.selectedLi, #sortable2 li.selectedLi {
+  /* opacity: 0.2; */
+  animation: blinker 1s linear infinite;
+}
+
+button.remove, button.selector {
+  margin: 1%;
+  float: right;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+}
+
+
+li span.healthBtns {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+li span.healthBtns i:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+li span.healthBtns i:active {
+  background-color: rgba(255, 255, 255, 1.0);
+}
+
+.healthBtns i {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-shadow: 0 0 2px green;
+  display: inline-block;
+  margin: 0;
+  padding: 0 1px;
+  font-size: 150%;
+  height: 1.5em;
+}
+
+.healthBtns i.down {
+  transform: rotate(180deg);
+}
+
+#example1 {
+  background: yellow;
+  width: 40px;
+  height: 40px;
+}
+#example2 {
+  background: orange;
+  width: 40px;
+  height: 40px;
+}
+#example3 {
+  background: red;
+  width: 40px;
+  height: 40px;
+}
+
+#iconList {
+  list-style: none;
+  background: #4e4e4e;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  margin: auto 20% auto 0;
+}
+#mapControls {
+  list-style: none;
+  padding-left: 15px;
+  background: #4e4e4e;
+}
+
+#colorPicker {
+  border: none;
+  padding: 1px;
+}
+
+.draggable {
+
+  width: 25px;
+  height: 25px;
+  font-size: 1.5em;
+  color: black;
+}
+
+/* .selectable .ui-selecting { background: #FECA40; }
+.selectable .ui-selected { background: #F39814; color: white; } */
+.selectable { margin: 0; padding: 0; }
+.selectable td { width: 25px; height: 25px; }
+
+.form-group {
+  font-size: 1.0rem;
+}
+select {
+  font-family: "FontAwesome", "Helvetica";
+}
+.map {
+  margin: auto;
+}
+.iconDiv {
+  margin: auto;
+  border-radius: 5px;
+}
+li.instruct{
+  margin-bottom: 10px;
+}
+
+li.draggable > i {
+  text-shadow: 0 0 2px white;
+}
+
+#diceDisplayBox li {
+  font-size: 120%;
+  list-style: none;
+  transition: all 0.1s;
+  font-kerning: none;
+}
+
+#diceDisplayBox li.diceSelected {
+  font-size: 150%;
+  font-weight: bold;
+  list-style: circle;
+  background: rgba(255, 255, 0, 0.3);
+}
+
+#diceDisplayBox li span.rollTotal {
+font-size: 150%;
+}
+
+.map-table {
+  width: auto;
+  margin: 5px;
+}
+
+.square-editable {
+  /*background-color: white;*/
+  border: 1px solid #999999;
+  width: 25px !important;
+  height: 25px;
+}
+
+.deleteable {
+  float: right;
+}
+
+button, input {
+  outline: none !important;
+}
+
+#clearPlayers {
+  float: right;
+}
+
+#squaresClearBtn, #mapClearBtn {
+  padding: 3px;
+  background-color: #222222;
+  color: white;
+  border-radius: 4px;
+}
+
+#squaresClearBtn:hover, #mapClearBtn:hover, {
+  cursor: pointer;
+  background-color: #383838;
+}
+
+#squaresClearBtn:active, #mapClearBtn:active {
+  background-color: #4e4e4e;
+  color: white;
+}
+
+#diceDisplayBox {
+  margin-top: 5px;
+  height: 500px;
+  width: 100%;
+  padding: 3px;
+  min-height: 150px;
+  background-color: #111111;
+  border-radius: 5px;
+  border: 1px solid #4e4e4e;
+}
