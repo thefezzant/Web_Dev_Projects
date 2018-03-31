@@ -1,14 +1,14 @@
-var rollsList = document.querySelector("#diceDisplayBox");
+const rollsList = document.querySelector("#diceDisplayBox");
 // var rollsListItems = document.querySelectorAll(".dice");
 
 function populateSelects() {
 
-  var $sideSelect = $("#numOfSides");
+  let $sideSelect = $("#numOfSides");
   for (i=2;i<=12;i+=2){
     $sideSelect.append($('<option></option>').val(i).html(i));
   }
   $sideSelect.append($('<option></option>').val(20).html(20));
-  var $numSelect = $("#numOfDice");
+  let $numSelect = $("#numOfDice");
   for (i=1;i<=20;i++){
     $numSelect.append($('<option></option>').val(i).html(i));
   }
@@ -20,7 +20,7 @@ $( "#diceDisplayBox" ).on( "click", ".dice", function() {
 });
 
 function newDiceRoll() {
-  var newLi = document.createElement("li");
+  let newLi = document.createElement("li");
   newLi.innerHTML = rollContentBuilder();
   newLi.classList.add("dice")
   if (rollsList.childElementCount < 9) {
@@ -47,15 +47,15 @@ function rollDice(min, max) {
 }
 
 function rollContentBuilder(){
-  var d = Number(document.querySelector("#numOfDice").value);
-  var s = Number(document.querySelector("#numOfSides").value);
-  var m = Number(document.querySelector("#modifier").value);
-  var rolls = [];
+  let d = Number(document.querySelector("#numOfDice").value);
+  let s = Number(document.querySelector("#numOfSides").value);
+  let m = Number(document.querySelector("#modifier").value);
+  let rolls = [];
   for (var i = 0; i < d; i++) {
     rolls.push(rollDice(1,s));
   }
-  var rollTotal = rolls.reduce(function(a, b) { return a + b; }, 0);
-  var resultStr = d + "d" + s + " [" + rolls + "] ";
+  let rollTotal = rolls.reduce(function(a, b) { return a + b; }, 0);
+  let resultStr = d + "d" + s + " [" + rolls + "] ";
   if (m) {
     rollTotal += m;
     resultStr += "+ " + m + " = " + "<span class='rollTotal'>" + rollTotal + "</span>";
