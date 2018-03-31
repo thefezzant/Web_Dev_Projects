@@ -1,20 +1,20 @@
-var squares = document.getElementsByClassName('square-editable');
-var playerButton = document.getElementById('playerBtn');
-var npcButton = document.getElementById('npcBtn');
-var updateButton = document.querySelector("#updateBtn");
-var initClearButton = document.querySelector("#clearPlayers");
-var inputs = document.getElementsByClassName("form-control");
-var deleteButtons = document.querySelectorAll(".remove");
-var selectedChars = document.querySelectorAll(".selectedLi");
-var playerPieces = document.querySelectorAll("li.draggable");
-var pickedColor = document.querySelector("#colorPicker").value;
+const squares = document.getElementsByClassName('square-editable');
+const playerButton = document.getElementById('playerBtn');
+const npcButton = document.getElementById('npcBtn');
+const updateButton = document.querySelector("#updateBtn");
+const initClearButton = document.querySelector("#clearPlayers");
+const inputs = document.getElementsByClassName("form-control");
+const deleteButtons = document.querySelectorAll(".remove");
+const selectedChars = document.querySelectorAll(".selectedLi");
+const playerPieces = document.querySelectorAll("li.draggable");
+const pickedColor = document.querySelector("#colorPicker").value;
 
 // Add Player character to Initiative List
 playerBtn.addEventListener("click", function(){
   // create an li element using the info provided by the user
   addChar();
   // set activeChars to the last li in the list of sortable li's
-  var activeChars = document.querySelector("#sortable2 li:nth-last-child(1)")
+  let activeChars = document.querySelector("#sortable2 li:nth-last-child(1)")
   // give this li the class of 'player'
   activeChars.classList.add("player");
   // give it health adjustment buttons
@@ -24,10 +24,10 @@ playerBtn.addEventListener("click", function(){
 // Add NPC character to Initiative List
 npcBtn.addEventListener("click", function(){
   // Roll NPC's initiative, adding user input as a roll modifier
-  var rollBonus = Number(document.querySelector("#playerIniInput").value);
+  let rollBonus = Number(document.querySelector("#playerIniInput").value);
   document.querySelector("#playerIniInput").value = rollBonus + Math.floor(Math.random() * (21 - 1)) + 1;
   addChar();
-  var activeChars = document.querySelector("#sortable2 li:nth-last-child(1)")
+  let activeChars = document.querySelector("#sortable2 li:nth-last-child(1)")
   activeChars.classList.add("NPC");
   adjustHealth();
 });
@@ -38,7 +38,7 @@ function addChar() {
   //   inputs[3].value = "";
   //   return false;
   // }
-  var pLi = document.createElement("li");
+  let pLi = document.createElement("li");
   pLi.innerHTML = liContentBuilder();
   pLi.id = inputs.playerNameInput.value;
   document.getElementById("sortable2").appendChild(pLi);
@@ -76,7 +76,7 @@ for (var i = 0; i < playerPieces.length; i++) {
 
 // health up and down buttons
 function adjustHealth(){
-  var cur = document.querySelectorAll(".health");
+  let cur = document.querySelectorAll(".health");
   for (var i = (cur.length - 2); (cur.length-2) <= i && i < cur.length; i++ ) {
     cur[i].addEventListener("click", function() {
       if (this.classList.contains("up")) {
@@ -90,7 +90,7 @@ function adjustHealth(){
 
 // Update currently selected character(s)
 function updateChar() {
-  var selectedCharsHealth = document.querySelectorAll(".selectedLi span.cHp");
+  let selectedCharsHealth = document.querySelectorAll(".selectedLi span.cHp");
   if (!selectedCharsHealth[0]){
     return false;
   }
@@ -103,7 +103,7 @@ function updateChar() {
 
 function liContentBuilder() {
   // take text from boxes
-  var char = {
+  let char = {
     icon: inputs.playerIconInput.value,
     name: inputs.playerNameInput.value,
     cHp: inputs.playerHpInput.value,
@@ -115,7 +115,7 @@ function liContentBuilder() {
     dwnBtn: "<i class='fa fa-angle-double-up health down'></i>"
   }
   // build html string
-  var spans = "<i class='fa fa-" + char.icon;
+  let spans = "<i class='fa fa-" + char.icon;
   spans += "'></i><span class='name'> " + char.name;
   spans += "</span> --  " + "<span class='healthBtns'>" + char.upBtn + " " + char.dwnBtn;
   spans += "</span> <span class='cHp'>" + char.cHp;
@@ -141,9 +141,10 @@ function clearColors(){
 }
 
 document.querySelector("#example1").addEventListener("click", function() {
-  var pickedColor = document.querySelector("#example1").style.background.value;
+  let pickedColor = document.querySelector("#example1").style.background.value;
   console.log(pickedColor);
 });
+
 // document.querySelector("#example2");
 // document.querySelector("#example3");
 
@@ -190,7 +191,6 @@ function colorSquaresClick() {
 
 $( "#sortable, #sortable2" ).sortable({
   connectWith: ".connectSort",
-  // helper: "clone",
   tolerance: "pointer",
   cursor: "move"
 }).disableSelection();
@@ -202,7 +202,6 @@ $( ".draggable" ).draggable({
   scroll: false,
   grid: [ 25, 12.5 ],
   snap: ".map-table"
-  // helper: "clone"
 });
 
 $( ".selectable" ).selectable();
